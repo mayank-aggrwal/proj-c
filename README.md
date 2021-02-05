@@ -19,7 +19,25 @@
    npm run dev
    ```
  - In the browser goto : http://localhost:5000/health
- 
+
+## Useful instructions
+
+### To check node version :
+```bash
+node -v
+```
+
+### To check npm version :
+```bash
+npm -v
+```
+
+### To check npm version :
+```bash
+npm -v
+```
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
