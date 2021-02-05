@@ -1,14 +1,16 @@
 const express = require('express')
 const cors = require('cors')
+const connectDB = require('./config/db')
 
 const app = express()
+
+// Connection to database
+connectDB()
 
 app.use(cors())
 app.use(express.json({ extended: false }))
 
-app.get('/health', (req, res) => {
-    res.send('API is up and running')
-})
+app.use('/', require('./routes/meme'))
 
 const PORT = process.env.PORT || 5000
 
