@@ -23,8 +23,6 @@ router.get('/memes', async (req, res) => {
         console.log(err);
         res.status(500).json(`Server error`);
     }
-    // find().sort({$natural:-1}).limit(yourValue);
-    // res.send('Memes route')
 })
 
 // GET /memes/<id>

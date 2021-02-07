@@ -5,6 +5,160 @@
 [![](https://img.shields.io/badge/mongoose-5.9.29-orange)](https://www.npmjs.com/package/mongoose)
 [![](https://img.shields.io/badge/author-mayankaggarwal-informational)](https://github.com/mayank-aggrwal/)
 
+## Open Endpoints
+
+ - Endpoint to send a meme to the backend :  `POST /memes`
+ - Endpoint to fetch the latest 100 memes created from the backend : `GET /memes`
+ - Endpoint to specify a particular id (identifying the meme) to fetch a single Meme. : `GET /memes/<id>`
+ - Check API health : `GET /health`
+
+---
+
+`POST /memes`
+### Request schema
+
+```json
+{
+    "name": "<meme-name>",
+    "url": "<meme-image-url>",
+    "caption": "<meme-cation>"
+}
+```
+### Response schema
+
+```json
+{
+  "id": "5f81dca70f685f2f104"
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Invalid long URL"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Invalid base URL"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Server error"
+  }
+}
+```
+---
+
+`GET /memes`
+### Response schema
+
+```json
+[
+  {
+    "id": "5f81dca70f685f2f104",
+    "name": "<meme-name>",
+    "url": "<meme-image-url>",
+    "caption": "<meme-caption>",
+    "date": "Sat Oct 10 2017 21:39:11 GMT+0530 (India Standard Time)"
+  },
+  {
+    "_id": "5f81dca70f685f2f156",
+    "name": "<meme-name>",
+    "url": "<meme-image-url>",
+    "caption": "<meme-caption>",
+    "date": "Sat Oct 13 2018 21:39:11 GMT+0530 (India Standard Time)"
+  }
+]
+```
+
+```json
+{
+  "errors": {
+    "message": "Code already in use"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Invalid long URL"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Invalid base URL"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Server error"
+  }
+}
+```
+---
+
+`GET /memes/<id>`
+### Response schema
+
+```json
+{
+  "id": "<id>",
+  "name": "<meme-name>",
+  "url": "<meme-image-url>",
+  "caption": "<meme-caption>",
+  "date": "Sat Oct 13 2018 21:39:11 GMT+0530 (India Standard Time)"
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Code already in use"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Invalid long URL"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Invalid base URL"
+  }
+}
+```
+
+```json
+{
+  "errors": {
+    "message": "Server error"
+  }
+}
+```
+
+---
+
 
 ## Instructions
 
@@ -32,11 +186,10 @@ node -v
 npm -v
 ```
 
-### To check npm version :
+### To setup an express app :
 ```bash
-npm -v
+npm init -y
 ```
-
 
 ## Contributing
 
