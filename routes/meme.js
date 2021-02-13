@@ -12,16 +12,20 @@ router.get('/health', function(req, res) {
 router.get('/memes', async (req, res) => {
     try {
         const memes = await Meme.find().sort({$natural:-1}).limit(5);
-        console.log(typeof(memes))
-        if (memes) {
-            console.log(memes)
-            res.json(memes)
-        } else {
-            return res.status(404).json(`Memes not found`)
-        }
+        // console.log(typeof(memes))
+        // if (memes) {
+        //     console.log(memes)
+        //     res.json(memes)
+        // } else {
+        //     return res.status(404).json(`Memes not found`)
+        // }
+        res.json(memes)
     } catch (err) {
-        console.log(err);
-        res.status(500).json(`Server error`);
+        console.log(err)
+        const errors = {
+            message: 'Server error'
+        }
+        res.status(500).json({ errors })
     }
 })
 
@@ -44,8 +48,11 @@ router.get('/memes/:id', async (req, res) => {
             return res.status(404).json(`Meme ID not found`)
         }
     } catch (err) {
-        console.log(err);
-        res.status(500).json(`Server error`);
+        console.log(err)
+        const errors = {
+            message: 'Server error'
+        }
+        res.status(500).json({ errors })
     }
     
 })
