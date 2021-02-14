@@ -12,6 +12,6 @@ app.use(express.json({ extended: false }))
 
 app.use('/', require('./routes/meme'))
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8081
 
 app.listen(PORT, (req, res) => console.log(`Server is up and running at PORT ${PORT}`))

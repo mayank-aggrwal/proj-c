@@ -11,6 +11,7 @@
  - Endpoint to fetch the latest 100 memes created from the backend : `GET /memes`
  - Endpoint to specify a particular id (identifying the meme) to fetch a single Meme. : `GET /memes/<id>`
  - Check API health : `GET /health`
+ - Endpoint to delete a meme : `DELETE /memes/<id>`
 
 ---
 
