@@ -1,10 +1,18 @@
-POST http://localhost:5000/memes
+# POST http://localhost:5000/memes
+# Content-Type: application/json
+
+# {
+#     "name": "Sachin Tendulkar",
+#     "url": "https://www.amazon.com/dp/B08J49NB1V/ref=sspa_dk_detail_4?psc=1&pd_rd_i=B08J49NB1V&pd_rd_w=5s3vj&pf_rd_p=7d37a48b",
+#     "caption": "God of Cricket"
+# }
+
+# GET http://localhost:5000/memes/601d6a283c2bb613cc68da35
+
+PATCH http://localhost:5000/memes/601d6d69a15e0d40cc129c2
 Content-Type: application/json
 
 {
-    "name": "Sachin Tendulkar",
-    "url": "https://www.amazon.com/dp/B08J49NB1V/ref=sspa_dk_detail_4?psc=1&pd_rd_i=B08J49NB1V&pd_rd_w=5s3vj&pf_rd_p=7d37a48b",
-    "caption": "God of Cricket"
+    "url": "http://ww.amazon/dp/B08J49NB1V/ref=sspa_dk_detail_4?psc=1&pd_rd_i=B08J49NB1V&pd_rd_w=5s3vj&pf_rd_p=7d37a48b",
+    "caption": "Powerhittter"
 }
-
-# GET http://localhost:5000/memes/601d6a283c2bb613cc68da35
